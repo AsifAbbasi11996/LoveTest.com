@@ -1,0 +1,97 @@
+.nav {
+    background-image: url('/src/assets/images/love_bg.png');
+    background-position: contain;
+    box-shadow: 0 0 35px rgba(255, 255, 255, 0.5);
+    
+    & .flex {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        column-gap: 50px;
+        padding-left: 3%;
+        
+        & li{
+            list-style-type: none;
+            padding: 1%;
+            
+            & img {
+                width: 100%;
+                height: 2rem;
+            }
+            
+            & a {
+                font-size: 16px;
+                font-weight: 700;
+                text-decoration: none;
+                color: black;
+                text-align: center;
+            }
+        }
+
+        & li a:hover{
+            color: white;
+        }
+
+
+        & .sub-nav .dropdown{
+            position: absolute;
+            display: none;
+            width: 13%;
+            background-color: #a8cbd6;
+            border-radius: 5px;
+            z-index: 1;
+
+            & li {
+                padding: 6% 7%;
+            }
+            
+            & li:hover{
+                background-color:  #80a7b3;
+                border-radius: 5px;
+            }
+
+            & li a {
+                color: black;
+                font-size: 14px;
+                font-weight: 500;
+
+                & img {
+                    width: 13px;
+                    height: 10px;
+                    margin-right: 5%;
+                }
+            }
+
+        }
+        & .sub-nav:hover .dropdown{
+            display: block;
+        }
+    }
+
+    & .menu-bar{
+        display: none;
+    }
+}
+
+
+@media only screen and (min-width:120px) and (max-width:720px) {
+    .nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 10px;
+
+
+        & .flex .sub-nav {
+            display: none;
+        }
+
+        & .menu-bar{
+            display: block;
+            color: black;
+            font-size: 25px;
+            font-weight: 600;
+        }
+    }
+    
+}

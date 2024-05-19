@@ -1,0 +1,58 @@
+.main_container {
+    display: flex;
+    padding: 20px 40px;
+    color: white;
+
+    & video {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+        z-index: -2;
+    }
+
+    & .left-container {
+        text-align: center;
+        line-height: 3;
+       
+
+        &  h1 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        & .para {
+
+            & h3 {
+                font-size: 22px;
+
+                & a {
+                    color: white;
+                }
+            }
+
+            & p {
+                font-size: 18px;
+                font-weight: 500;
+                line-height: 1.4;
+                margin-bottom: 20px;
+            }
+
+            & p:first-child {
+                font-weight: 700;
+            }
+
+
+        }
+    }
+}
+
+@media only screen and (min-width:120px) and (max-width:720px) {
+    .main_container{
+        flex-direction: column;
+     
+    }
+
+}

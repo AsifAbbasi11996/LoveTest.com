@@ -1,0 +1,149 @@
+.main-container {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+
+    & video {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+        z-index: -2;
+    }
+
+    & .heading h1 {
+        font-size: 34px;
+        font-weight: 700;
+        margin-bottom: 25px;
+    }
+
+    & .para {
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 25px;
+    }
+
+    & .first-box {
+        background-image: linear-gradient(0deg, #e11e6c 0%, rgba(245, 71, 181, 0.834) 100%), url('/src/assets/images/love_bg.png');
+        background-size: cover;
+        backdrop-filter: blur(50px);
+        border: 1px solid white;
+        color: white;
+        padding: 20px;
+        border-radius: 10px;
+        max-width: 50vw;
+        margin-bottom: 25px;
+
+        & h1 {
+            font-size: 24px;
+            font-weight: 700;
+            text-decoration: underline;
+            margin-bottom: 20px;
+
+            & a {
+                color: white;
+            }
+        }
+
+        & p {
+            font-size: 16px;
+            font-weight: 500;
+            text-align: left;
+            line-height: 1.4;
+            margin-bottom: 20px;
+        }
+
+        & .input {
+            line-height: 3;
+            margin-bottom: 20px;
+
+            & label {
+                font-size: 16px;
+                font-weight: 700;
+            }
+
+            & input {
+                padding: 7px;
+                border-radius: 5px;
+                border: none;
+                margin-left: 10px;
+            }
+        }
+    }
+
+    & .btn {
+        text-align: center;
+
+    }
+
+    & button {
+        font-size: 16px;
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        background-color: white;
+        color: black;
+        cursor: pointer;
+    }
+
+    & button:hover {
+        background-color: black;
+        color: white;
+    }
+
+    & .boxes {
+        display: flex;
+        justify-content: center;
+        column-gap: 25px;
+
+
+
+        & .box {
+            width: 25%;
+            height: fit-content;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: rgb(204, 49, 116);
+
+            & h1 {
+                font-size: 22px;
+                margin-bottom: 15px;
+                text-decoration: underline;
+            }
+
+            & p {
+                font-size: 16px;
+                margin-bottom: 15px;
+            }
+        }
+    }
+
+    & .box-first-row,
+    .box-second-row,
+    .box-third-row {
+        margin-bottom: 25px;
+    }
+}
+
+@media only screen and (min-width:120px) and (max-width:720px) {
+    .main-container {
+
+        & .first-box {
+            max-width: 100vw;
+        }
+
+        & .boxes {
+            flex-direction: column;
+            row-gap: 20px;
+
+            & .box {
+                width: 92%;
+            }
+        }
+    }
+
+}

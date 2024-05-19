@@ -1,0 +1,130 @@
+.container {
+    padding: 20px 40px;
+    color: white;
+
+    & video {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+        z-index: -2;
+    }
+
+    & .left-container {
+        line-height: 3;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+
+        & h1 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        & .para {
+
+            & h3 {
+                font-size: 22px;
+            }
+
+            & p {
+                text-align: center;
+            }
+
+        }
+
+        & .form {
+            width: 400px;
+            padding: 10px 20px;
+            margin: 50px 0px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            border-radius: 15px;
+            box-shadow: 0 0 35px rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(50px);
+            --webkit-backdrop-filter: blur(50px);
+
+            & h2 {
+                font-size: 18px;
+            }
+
+            & label {
+                font-size: 16px;
+                font-weight: 500;
+                margin-right: 10px;
+            }
+
+            & input {
+                box-sizing: border-box;
+                padding: 8px;
+                border-radius: 5px;
+                outline: none;
+                border: 1px solid rgba(0, 255, 255, 0.2);
+                transition: 0.3s ease-out;
+            }
+
+            & select {
+                font-weight: 600;
+                padding: 8px;
+                border-radius: 5px;
+                outline: none;
+                border: 1px solid rgba(0, 255, 255, 0.2);
+                transition: 0.3s ease-out;
+            }
+
+
+            & button {
+                font-size: 16px;
+                padding: 10px 15px;
+                border-radius: 5px;
+                border: none;
+                background-color: white;
+                color: black;
+                cursor: pointer;
+            }
+
+            & button:hover{
+                background-color: rgb(55, 55, 55);
+                color: white;
+            }
+        }
+
+
+        & ul li,
+        p {
+            font-size: 18px;
+            font-weight: 500;
+            text-align: justify;
+            line-height: 1.4;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+
+@media only screen and (min-width:120px) and (max-width:720px) {
+
+    .container {
+
+        & .left-container {
+
+            & h1 {
+                font-size: 24px;
+            }
+
+            & .form {
+                width: 300px;
+            }
+
+        }
+
+    }
+
+
+}
