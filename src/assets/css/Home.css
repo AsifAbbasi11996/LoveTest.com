@@ -123,8 +123,7 @@
     }
 
     & .box-first-row,
-    .box-second-row,
-    .box-third-row {
+    .box-second-row {
         margin-bottom: 25px;
     }
 }
