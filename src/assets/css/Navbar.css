@@ -33,7 +33,17 @@
         }
 
         & li button {
-            display: none;
+            border: none;
+            background-color: transparent;
+            margin-left: 10px;
+            font-size: 20px;
+            font-weight: 700;
+
+            i {
+                display: block;
+                color: black;
+                cursor: pointer;
+            }
         }
 
 
