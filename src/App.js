@@ -26,6 +26,7 @@ import Aquarius from './components/Aquarius';
 import Pisces from './components/Pisces';
 import Cancer from './components/Cancer';
 import Sagittarius from './components/Sagittarius';
+import Navbar2 from './components/Navbar2'
 
 
 // pages 
@@ -37,10 +38,12 @@ import AboutPage from './pages/AboutPage';
 const App = () => {
   return (
     <>
+    
       <Routes>
 
         {/* components */}
         <Route path="/navbar" element={<Navbar />} />
+        <Route path="/navbar2" element={<Navbar2 />} />
         <Route path='/' element={<Home />} />
         <Route path='/quizcentral' element={<QuizCentral />} />
         <Route path='/OriginalLoveTest' element={<OriginalLoveTest />} />

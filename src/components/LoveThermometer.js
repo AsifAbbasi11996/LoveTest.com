@@ -8,7 +8,7 @@ const LoveThermometer = () => {
         <div>
             <Navbar />
             <div className="na-container">
-            <video autoPlay loop muted src={homepagebgvideo}></video>
+                <video autoPlay loop muted src={homepagebgvideo}></video>
                 <h1>Love Thermometer</h1>
 
                 <p>The Love Thermometer analyzes various aspects of your relationship. You enter your name and the name of your partner and then you can choose different aspects to analyze.</p>
@@ -46,7 +46,7 @@ const LoveThermometer = () => {
                             <option value="">Pisces (20-02 to 20-03)</option>
                         </select><br /><br />
 
-                        <h2>About Your Dream Partner :</h2><br/>
+                        <h2>About Your Dream Partner :</h2><br />
                         <label htmlFor="">Full Name :</label>
                         <input type="text" /><br /><br />
 
@@ -74,32 +74,31 @@ const LoveThermometer = () => {
                             <option value="">Capricorn (22-12 to 20-01)</option>
                             <option value="">Aquarius (21-01 to 19-02)</option>
                             <option value="">Pisces (20-02 to 20-03)</option>
-                        </select><br/><br/>
+                        </select><br /><br />
 
 
                         <h2>Love Thermometer Options: </h2><br />
-                        <label htmlFor="">How do you personally feel about your relationship?
-</label><br/><br/>
-                        <input type="radio" name='gender' id='female'/>
+                        <label htmlFor="">How do you personally feel about your relationship?</label><br /><br />
+                        <input type="radio" name='gender' id='female' />
                         &nbsp;&nbsp;
                         <label htmlFor=""> I'm not happy </label>
 
-                        <input type="radio" name='gender' id='female'/>
+                        <input type="radio" name='gender' id='female' />
                         &nbsp;&nbsp;
                         <label htmlFor="">I'm happy</label>
 
-                        <input type="radio" name='gender' id='female'/>
+                        <input type="radio" name='gender' id='female' />
                         &nbsp;&nbsp;
                         <label htmlFor="">I don't know</label><br /><br />
 
-                        <label htmlFor="">Which aspect of your relationship would you like to analyze?</label><br/><br/>
+                        <label htmlFor="">Which aspect of your relationship would you like to analyze?</label><br /><br />
                         <select name="" id="">
                             <option value="">Love Compatibility</option>
                             <option value="">Friendship</option>
                             <option value="">Support</option>
                             <option value="">Lust</option>
                             <option value="">All aspects</option>
-                        </select><br/><br/>
+                        </select><br /><br />
 
                         <h2>Are You Ready ?</h2><br />
                         <button>Continue</button>
@@ -113,7 +112,6 @@ const LoveThermometer = () => {
                     <li>Your information will NOT be saved, stored or transferred to any 3rd parties.</li>
                     <li>Check the privacy policy at the bottom of the page if you have any questions.</li>
                 </ul>
-
             </div>
             <Footer />
         </div>

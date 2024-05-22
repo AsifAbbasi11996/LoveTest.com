@@ -7,9 +7,9 @@ import homepagebgvideo from '../assets/images/homepagebgvideo.mp4'
 const OriginalLoveTest = () => {
   return (
     <div>
-      <Navbar/>
+      <Navbar />
       <div className="container">
-      <video autoPlay loop muted src={homepagebgvideo}></video>
+        <video autoPlay loop muted src={homepagebgvideo}></video>
         <div className="left-container">
           <div className="heading">
             <h1>Original Internet Love Test</h1>
@@ -101,9 +101,10 @@ const OriginalLoveTest = () => {
 
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   )
 }
 
 export default OriginalLoveTest
+

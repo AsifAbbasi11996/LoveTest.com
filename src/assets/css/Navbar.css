@@ -1,24 +1,27 @@
 .nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 4rem;
+    gap: 50px;
+    padding: 10px 20px;
     background-image: url('/src/assets/images/love_bg.png');
     background-position: contain;
     box-shadow: 0 0 35px rgba(255, 255, 255, 0.5);
-    
+
+    & img {
+        width: 80%;
+    }
+
     & .flex {
         display: flex;
         align-items: center;
         justify-content: flex-start;
         column-gap: 50px;
-        padding-left: 3%;
-        
-        & li{
+
+        & li {
             list-style-type: none;
-            padding: 1%;
-            
-            & img {
-                width: 100%;
-                height: 2rem;
-            }
-            
+
             & a {
                 font-size: 16px;
                 font-weight: 700;
@@ -26,14 +29,18 @@
                 color: black;
                 text-align: center;
             }
+
+            & i {
+                display: none;
+            }
         }
 
-        & li a:hover{
+        & li a:hover {
             color: white;
         }
 
 
-        & .sub-nav .dropdown{
+        & .sub-nav .dropdown {
             position: absolute;
             display: none;
             width: 13%;
@@ -44,9 +51,9 @@
             & li {
                 padding: 6% 7%;
             }
-            
-            & li:hover{
-                background-color:  #80a7b3;
+
+            & li:hover {
+                background-color: #80a7b3;
                 border-radius: 5px;
             }
 
@@ -63,35 +70,89 @@
             }
 
         }
-        & .sub-nav:hover .dropdown{
+
+        & .sub-nav:hover .dropdown {
             display: block;
         }
     }
 
-    & .menu-bar{
+    & .menu-bar {
         display: none;
     }
 }
 
-
 @media only screen and (min-width:120px) and (max-width:720px) {
-    .nav{
+    .nav {
         display: flex;
         align-items: center;
         justify-content: space-around;
         padding: 10px;
 
+        & .flex {
+            position: fixed;
+            top: 0;
+            z-index: 1;
+            left: -100%;
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: 0.4s;
+            background-color: #2c2b2b;
 
-        & .flex .sub-nav {
-            display: none;
+            & li a {
+                color: white;
+            }
+
+            & li button {
+                border: none;
+                background-color: transparent;
+                margin-left: 10px;
+                font-size: 20px;
+
+                i {
+                    display: block;
+                    color: white;
+                    cursor: pointer;
+                }
+            }
+
+
+            & .sub-nav .dropdown {
+                text-align: left;
+                width: 200px;
+                padding: 10px;
+
+                & li {
+                    padding: 1px;
+
+                    & a {
+                        padding-left: 10px;
+                    }
+
+                }
+            }
+
         }
 
-        & .menu-bar{
-            display: block;
+        & .flex.active {
+            left: 0;
+            padding: 20px 0;
+        }
+
+        .sub-nav {
+            font-size: 1.8rem;
+            justify-content: center;
+        }
+
+        & .menu-bar {
+            display: flex;
             color: black;
             font-size: 25px;
             font-weight: 600;
+            z-index: 1;
+            cursor: pointer;
         }
     }
-    
+
 }

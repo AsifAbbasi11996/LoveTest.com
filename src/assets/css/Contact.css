@@ -94,6 +94,10 @@
     .contact-container {
         & .form {
             width: 300px;
+
+            & .email{
+                margin-top: 10px;
+            }
         }
     }
 }

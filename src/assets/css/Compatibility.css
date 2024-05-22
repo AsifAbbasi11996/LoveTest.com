@@ -8,17 +8,21 @@
 
     & video {
         position: fixed;
-        right: 0;
-        bottom: 0;
+        top: 0;
         min-width: 100%;
         min-height: 100%;
         z-index: -2;
+        filter: blur(2px);
     }
 
     & h1 {
         font-size: 36px;
         font-weight: 700;
         margin-bottom: 15px;
+        border: 1px solid white;
+        padding: 10px 20px;
+        border-radius: 10px;
+        backdrop-filter: blur(35px);
     }
 
     & p {

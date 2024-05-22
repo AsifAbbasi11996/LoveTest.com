@@ -29,10 +29,10 @@ const Contact = () => {
                         <label htmlFor="">Email <span>(Required)</span></label><br /><br />
 
                         <label htmlFor="">Enter Email</label>
-                        <input type="email" required /><br /><br />
+                        <input type="email" className='email' required /><br /><br />
 
                         <label htmlFor="">Confirm Email</label>
-                        <input type="email" required /><br /><br /><br />
+                        <input type="email" className='email' required /><br /><br /><br />
 
                         <label htmlFor="">Comments <span>(Required)</span></label><br /><br />
 
