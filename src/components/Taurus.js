@@ -1,6 +1,8 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 import Navbar from './Navbar'
 import Footer from './Footer'
+import Taurus2 from '../assets/images/Taurus2.jpg'
 import astrologerbgvideo from '../assets/images/astrologerbgvideo.mp4'
 
 const Taurus = () => {
@@ -12,9 +14,8 @@ const Taurus = () => {
         </video>
 
         <h1>Compatibility Information for Taurus</h1>
-        {/* image here*/}
-        {/* <img src={ariespic} /> */}
-        <p className='para'>This information was kindly provided by the folks of AstroMate. The only online match-making service that uses astrology to find your match made in heaven.</p>
+        <NavLink to='/Taurus'><img src={Taurus2} alt="" /><h2>Taurus</h2></NavLink>
+        <p className='para'>This information was kindly provided by the folks of AstroMate.<br/> The only online match-making service that uses astrology to find your match made in heaven.</p>
 
         <div className='male-female'>
           <div className='male'>

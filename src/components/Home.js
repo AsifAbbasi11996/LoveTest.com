@@ -42,21 +42,21 @@ const Home = () => {
                         <h1>LoveTest Thermometer</h1>
                         <p>Enter the LoveTest Thermometer and get a rating about your relationships. This is a similar system like the other popular love calculators on the Internet. However we take it a step further and let you analyze various aspects of your relationship. Find out about the meaning of your name!</p>
 
-                        <button>LoveTest Thermometer</button>
+                        <button><NavLink to='/LoveThermometer'>LoveTest Thermometer</NavLink></button>
                     </div>
 
                     <div className="box2 box">
                         <h1>Numerology LoveTest</h1>
                         <p>Take the Numerology LoveTest to get a compatibility score for up to 5 partners. If you can't decide which partner is the right one, then you should take this test.</p>
 
-                        <button>Numerology LoveTest</button>
+                        <button><NavLink to='/NumerologyAnalysis'>Numerology LoveTest</NavLink></button>
                     </div>
 
                     <div className="box3 box">
                         <h1>Quiz Central</h1>
                         <p>There are plenty of personality quizzes and love tests in our quiz central. More quizzes will be added soon. Come back often for the latest quizzes!</p>
 
-                        <button>Quiz Central</button>
+                        <button><NavLink to='/QuizCentralPage'>Quiz Central</NavLink></button>
                     </div>
                 </div>
 
@@ -65,19 +65,19 @@ const Home = () => {
                         <h1>Compatibility Analysis</h1>
                         <p>You've asked for it and now it's here! The fast and personal astro compatibility analysis. Enter your birthday and your dream partner's date of birth to find out how compatible you really are. We've added new videos to the analysis.</p>
 
-                        <button>Compatibility Analysis</button>
+                        <button><NavLink to='/Compatibility'>Compatibility Analysis</NavLink></button>
                     </div>
                     <div className="box2 box">
                         <h1>Quick Love Calculator</h1>
                         <p>Calculate your love compatibility for up to 3 names at the same time... We'll show you a graph how compatibile you are with each of your 3 secret sweethearts. The results are private and only shown to your eyes. We do not keep a record of the names you enter into this love test.</p>
 
-                        <button>Love Calculator</button>
+                        <button><NavLink to='/'>Love Calculator</NavLink></button>
                     </div>
                     <div className="box3 box">
                         <h1>Love Test Fortune Teller</h1>
                         <p>Need a look into the future? The Love Test Fortune Teller might be the solution for you...</p>
 
-                        <button>Fortune Teller</button>
+                        <button><NavLink to='/LoveFortune'>Fortune Teller</NavLink></button>
                     </div>
                 </div>
             </div>

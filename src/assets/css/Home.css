@@ -125,6 +125,15 @@
     & .box-first-row,
     .box-second-row {
         margin-bottom: 25px;
+
+        & button a{
+                text-decoration: none;
+                color: black;     
+        }
+
+        & button:hover a{
+            color: white;
+        }
     }
 }
 

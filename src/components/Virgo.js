@@ -1,20 +1,21 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 import Navbar from './Navbar'
 import Footer from './Footer'
+import Virgo2 from '../assets/images/Virgo2.jpg'
 import astrologerbgvideo from '../assets/images/astrologerbgvideo.mp4'
 
 const Virgo = () => {
   return (
     <div>
-      <Navbar/>
+      <Navbar />
       <div className='zodiac Virgocontainer'>
         <video autoPlay loop muted src={astrologerbgvideo}>
         </video>
 
         <h1>Compatibility Information for Virgo</h1>
-        {/* image here*/}
-        {/* <img src={ariespic} /> */}
-        <p className='para'>This information was kindly provided by the folks of AstroMate. The only online match-making service that uses astrology to find your match made in heaven.</p>
+        <NavLink to='/Virgo'><img src={Virgo2} alt="" /><h2>Virgo</h2></NavLink>
+        <p className='para'>This information was kindly provided by the folks of AstroMate. <br /> The only online match-making service that uses astrology to find your match made in heaven.</p>
 
         <div className='male-female'>
           <div className='male'>
@@ -68,7 +69,7 @@ const Virgo = () => {
           <p>This is a polarity attraction. You are enamored by the Pisces empathetic ways and in turn the Fish needs your practical direction. Pisces' sexuality can bring out the erotic side in you.</p>
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   )
 }

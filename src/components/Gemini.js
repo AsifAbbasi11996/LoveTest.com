@@ -1,6 +1,8 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 import Navbar from './Navbar'
 import Footer from './Footer'
+import Gemini2 from '../assets/images/Gemini2.jpg'
 import astrologerbgvideo from '../assets/images/astrologerbgvideo.mp4'
 
 const Gemini = () => {
@@ -12,9 +14,8 @@ const Gemini = () => {
         </video>
 
         <h1>Compatibility Information for Gemini</h1>
-        {/* image here*/}
-        {/* <img src={ariespic} /> */}
-        <p className='para'>This information was kindly provided by the folks of AstroMate. The only online match-making service that uses astrology to find your match made in heaven.</p>
+        <NavLink to='/Gemini'><img src={Gemini2} alt="" /><h2>Gemini</h2></NavLink>
+        <p className='para'>This information was kindly provided by the folks of AstroMate. <br/>The only online match-making service that uses astrology to find your match made in heaven.</p>
 
         <div className='male-female'>
           <div className='male'>
