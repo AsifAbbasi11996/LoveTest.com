@@ -43,7 +43,6 @@ const Compatibility = () => {
           <NavLink to='/Aquarius'><img src={Aquarius2} alt="" /><h2>Aquarius</h2></NavLink>
           <NavLink to='/Pisces'><img src={Pisces2} alt="" /><h2>Pisces</h2></NavLink>
         </div>
-
       </div>
       <Footer />
     </div>

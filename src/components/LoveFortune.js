@@ -1,14 +1,27 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { NavLink } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
 import Navbar from './Navbar'
 import Footer from './Footer'
 import homepagebgvideo from '../assets/images/homepagebgvideo.mp4'
 
 const LoveFortune = () => {
+    
+    const [yourName, setYourName] = useState('');
+
+    // First useNavigate hook
+    const navigateToDisplay = useNavigate();
+
+    const handleSubmit = () => {
+        navigateToDisplay('/LoveFortuneTeller', { state: { yourName } });
+    };
+
+
     return (
         <div>
             <Navbar />
             <div className="na-container">
-            <video autoPlay loop muted src={homepagebgvideo}></video>
+                <video autoPlay loop muted src={homepagebgvideo}></video>
                 <h1>Love Fortune</h1>
 
                 <p>Do you know yourself? If not, then take the fortune teller and find out. This is not really serious, but you might find some truth in it nonetheless.</p>
@@ -19,7 +32,8 @@ const LoveFortune = () => {
                     <form action="" method='post'>
                         <h2>Information About You :</h2><br />
                         <label htmlFor="">Full Name :</label>
-                        <input type="text" /><br /><br />
+                        <input type="text" value={yourName}
+                            onChange={(e) => setYourName(e.target.value)} /><br /><br />
 
                         <label htmlFor="">Gender :</label>
                         <input type="radio" name='gender' id='male' />
@@ -47,16 +61,16 @@ const LoveFortune = () => {
                         </select><br /><br />
 
                         <h2>Your Preferred Partner is :</h2><br />
-                        <input type="radio" name='gender' id='male' />
+                        <input type="radio" name='gender1' id='male' />
                         &nbsp;&nbsp;
                         <label htmlFor="">Male</label>
 
-                        <input type="radio" name='gender' id='female' />
+                        <input type="radio" name='gender1' id='female' />
                         &nbsp;&nbsp;
                         <label htmlFor="">Female</label><br /><br />
 
                         <h2>Are You Ready ?</h2><br />
-                        <button>Continue</button>
+                        <button onClick={handleSubmit}><NavLink to='/LoveFortuneTeller'>Continue</NavLink></button>
                     </form>
                 </div>
 

@@ -1,5 +1,5 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
+import React, { useState } from 'react'
+import { NavLink, useNavigate } from 'react-router-dom'
 import '../assets/css/Home.css'
 import Navbar from './Navbar'
 import Footer from './Footer'
@@ -7,6 +7,17 @@ import homepagebgvideo from '../assets/images/homepagebgvideo.mp4'
 
 
 const Home = () => {
+
+    const [inputName, setInputName] = useState('')
+    const [inputPartnerName, setInputPartnerName] = useState('')
+
+    const navigateToDisplay = useNavigate();
+
+    const handleSubmit = () => {
+        navigateToDisplay('/OriginalLoveTest', { state: { inputName, inputPartnerName } });
+    };
+
+
     return (
         <div>
             <Navbar />
@@ -27,33 +38,33 @@ const Home = () => {
 
                     <div className="input">
                         <label htmlFor="">Your Name :</label>
-                        <input type="text" placeholder='Enter Your Name' /><br></br>
+                        <input type="text" placeholder='Enter Your Name' value={inputName} onChange={(e) => setInputName(e.target.value)} /><br></br>
                         <label htmlFor="">Your Partner :</label>
-                        <input type="text" placeholder='Enter Your Partner Name' />
+                        <input type="text" placeholder='Enter Your Partner Name'  value={inputPartnerName} onChange={(e) => setInputPartnerName(e.target.value)}/>
                     </div>
 
                     <div className="btn">
-                        <button>Continue..</button>
+                    <button onClick={handleSubmit}><NavLink to='/OriginalLoveTestPart1'>Continue</NavLink></button>
                     </div>
                 </div>
 
                 <div className="boxes box-first-row">
                     <div className="box1 box">
-                        <h1>LoveTest Thermometer</h1>
+                        <h1><NavLink to='/LoveThermometer'>LoveTest Thermometer</NavLink></h1>
                         <p>Enter the LoveTest Thermometer and get a rating about your relationships. This is a similar system like the other popular love calculators on the Internet. However we take it a step further and let you analyze various aspects of your relationship. Find out about the meaning of your name!</p>
 
                         <button><NavLink to='/LoveThermometer'>LoveTest Thermometer</NavLink></button>
                     </div>
 
                     <div className="box2 box">
-                        <h1>Numerology LoveTest</h1>
+                        <h1><NavLink to='/NumerologyAnalysis'>Numerology LoveTest</NavLink></h1>
                         <p>Take the Numerology LoveTest to get a compatibility score for up to 5 partners. If you can't decide which partner is the right one, then you should take this test.</p>
 
                         <button><NavLink to='/NumerologyAnalysis'>Numerology LoveTest</NavLink></button>
                     </div>
 
                     <div className="box3 box">
-                        <h1>Quiz Central</h1>
+                        <h1><NavLink to='/QuizCentralPage'>Quiz Central</NavLink></h1>
                         <p>There are plenty of personality quizzes and love tests in our quiz central. More quizzes will be added soon. Come back often for the latest quizzes!</p>
 
                         <button><NavLink to='/QuizCentralPage'>Quiz Central</NavLink></button>
@@ -62,19 +73,13 @@ const Home = () => {
 
                 <div className="boxes box-second-row">
                     <div className="box1 box">
-                        <h1>Compatibility Analysis</h1>
+                        <h1><NavLink to='/Compatibility'>Compatibility Analysis</NavLink></h1>
                         <p>You've asked for it and now it's here! The fast and personal astro compatibility analysis. Enter your birthday and your dream partner's date of birth to find out how compatible you really are. We've added new videos to the analysis.</p>
 
                         <button><NavLink to='/Compatibility'>Compatibility Analysis</NavLink></button>
                     </div>
-                    <div className="box2 box">
-                        <h1>Quick Love Calculator</h1>
-                        <p>Calculate your love compatibility for up to 3 names at the same time... We'll show you a graph how compatibile you are with each of your 3 secret sweethearts. The results are private and only shown to your eyes. We do not keep a record of the names you enter into this love test.</p>
-
-                        <button><NavLink to='/'>Love Calculator</NavLink></button>
-                    </div>
                     <div className="box3 box">
-                        <h1>Love Test Fortune Teller</h1>
+                        <h1><NavLink to='/LoveFortune'>Love Test Fortune Teller</NavLink></h1>
                         <p>Need a look into the future? The Love Test Fortune Teller might be the solution for you...</p>
 
                         <button><NavLink to='/LoveFortune'>Fortune Teller</NavLink></button>

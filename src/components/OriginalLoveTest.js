@@ -1,14 +1,30 @@
-import React from 'react'
-import '../assets/css/OriginalLoveTest.css'
+import React, { useState } from 'react'
+import { NavLink, useNavigate, useLocation } from 'react-router-dom'
 import Navbar from './Navbar'
 import Footer from './Footer'
+import '../assets/css/OriginalLoveTest.css'
 import homepagebgvideo from '../assets/images/homepagebgvideo.mp4'
 
+
 const OriginalLoveTest = () => {
+
+ const location = useLocation();
+  
+  const navigateToDisplay = useNavigate();
+
+  const handleSubmit = () => {
+    navigateToDisplay('/OriginalLoveTestPart1', { state: { yourName, partnerName } });
+  };
+
+  const { inputName, inputPartnerName } = location.state || {inputName: '', inputPartnerName: ''}
+
+  const [yourName, setYourName] = useState(inputName);
+  const [partnerName, setPartnerName] = useState(inputPartnerName);
+
   return (
     <div>
       <Navbar />
-      <div className="container">
+      <div className="oglovetest-container">
         <video autoPlay loop muted src={homepagebgvideo}></video>
         <div className="left-container">
           <div className="heading">
@@ -26,10 +42,11 @@ const OriginalLoveTest = () => {
           </div>
 
           <div className="form">
-            <form action="" method='post'>
+            <form>
               <h2>Information About You :</h2>
               <label htmlFor="">Full Name :</label>
-              <input type="text" /><br />
+              <input type="text" value={yourName}
+                onChange={(e) => setYourName(e.target.value)} /><br />
 
               <label htmlFor="">Gender :</label>
               <input type="radio" name='gender' id='male' />
@@ -58,14 +75,15 @@ const OriginalLoveTest = () => {
 
               <h2>About Your Dream Partner :</h2>
               <label htmlFor="">Full Name :</label>
-              <input type="text" /><br />
+              <input type="text" value={partnerName}
+                onChange={(e) => setPartnerName(e.target.value)} /><br />
 
               <label htmlFor="">Gender :</label>
-              <input type="radio" name='gender' id='male' />
+              <input type="radio" name='gender1' id='male' />
               &nbsp;&nbsp;
               <label htmlFor="">Male</label>
 
-              <input type="radio" name='gender' id='female' />
+              <input type="radio" name='gender1' id='female' />
               &nbsp;&nbsp;
               <label htmlFor="">Female</label><br />
 
@@ -87,7 +105,7 @@ const OriginalLoveTest = () => {
               </select>
 
               <h2>Are You Ready ?</h2>
-              <button>Continue</button>
+              <button onClick={handleSubmit}><NavLink to='/OriginalLoveTestPart1'>Continue</NavLink></button>
             </form>
           </div>
 
@@ -107,4 +125,3 @@ const OriginalLoveTest = () => {
 }
 
 export default OriginalLoveTest
-

@@ -1,9 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { NavLink, useNavigate } from 'react-router-dom'
 import Navbar from './Navbar'
 import Footer from './Footer'
 import homepagebgvideo from '../assets/images/homepagebgvideo.mp4'
 
 const LoveThermometer = () => {
+
+    const [yourName, setYourName] = useState('');
+    const [partnerName, setPartnerName] = useState('');
+
+    const navigateToDisplay = useNavigate();
+
+    const handleSubmit = () => {
+        navigateToDisplay('/LoveThermometerResults', { state: { yourName, partnerName } });
+    };
+
+
     return (
         <div>
             <Navbar />
@@ -19,7 +31,7 @@ const LoveThermometer = () => {
                     <form action="" method='post'>
                         <h2>Information About You :</h2><br />
                         <label htmlFor="">Full Name :</label>
-                        <input type="text" /><br /><br />
+                        <input type="text" value={yourName} onChange={(e) => setYourName(e.target.value)} /><br /><br />
 
                         <label htmlFor="">Gender :</label>
                         <input type="radio" name='gender' id='male' />
@@ -48,7 +60,7 @@ const LoveThermometer = () => {
 
                         <h2>About Your Dream Partner :</h2><br />
                         <label htmlFor="">Full Name :</label>
-                        <input type="text" /><br /><br />
+                        <input type="text" value={partnerName} onChange={(e) => setPartnerName(e.target.value)} /><br /><br />
 
                         <label htmlFor="">Gender :</label>
                         <input type="radio" name='gender' id='male' />
@@ -101,7 +113,7 @@ const LoveThermometer = () => {
                         </select><br /><br />
 
                         <h2>Are You Ready ?</h2><br />
-                        <button>Continue</button>
+                        <button onClick={handleSubmit}><NavLink to='/LoveThermometerResults'>Continue</NavLink></button>
                     </form>
                 </div>
 

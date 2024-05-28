@@ -1,4 +1,4 @@
-.container {
+.oglovetest-container {
     padding: 20px 40px;
     color: white;
 
@@ -87,10 +87,19 @@
                 background-color: white;
                 color: black;
                 cursor: pointer;
+
+                a {
+                    text-decoration: none;
+                    color: black;
+                }
+
             }
 
             & button:hover{
                 background-color: rgb(55, 55, 55);
+            }
+    
+            button:hover a {
                 color: white;
             }
         }
