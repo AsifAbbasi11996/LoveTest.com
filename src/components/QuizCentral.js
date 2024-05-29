@@ -30,9 +30,6 @@ const QuizCentral = () => {
 
           <h3><NavLink to='/LoveFortune'>Love Fortune Teller</NavLink></h3>
           <p>Did you ever want to get more information about yourself? Then ask the Love Fortune Teller for more insights. It's fast and a pretty accurate…</p>
-
-          <h3><NavLink to='/LoveCompatibility'>Love Compatibility Analysis</NavLink></h3>
-          <p>This is our newest love analyzer… enter your birthday and the birthday of your partner to find out how compatible you are on the astro-birth level.</p>
         </div>
 
       </div>
