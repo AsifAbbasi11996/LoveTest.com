@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Navbar from './Navbar'
 import Footer from './Footer'
 import '../assets/css/Compatibility.css'
@@ -20,6 +20,12 @@ import Pisces2 from '../assets/images/Pisces2.jpg'
 import astrologerbgvideo from '../assets/images/astrologerbgvideo.mp4'
 
 const Compatibility = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+
   return (
     <div>
       <Navbar />

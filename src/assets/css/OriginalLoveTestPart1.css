@@ -136,6 +136,10 @@
     h2 {
         text-align: center;
     }
+
+    p span {
+        color: rgb(24, 193, 72);
+    }
 }
 
 .love-thermometer-results {

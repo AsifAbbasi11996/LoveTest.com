@@ -11,7 +11,6 @@ import OriginalLoveTest from './components/OriginalLoveTest';
 import NumerologyAnalysis from './components/NumerologyAnalysis';
 import LoveFortune from './components/LoveFortune';
 import LoveThermometer from './components/LoveThermometer';
-import LoveCompatibility from './components/LoveCompatibility';
 import Compatibility from './components/Compatibility';
 import Aries from './components/Aries';
 import Taurus from './components/Taurus';
@@ -51,7 +50,6 @@ const App = () => {
           <Route path="/Compatibility" element={<Compatibility />} />
           <Route path='/About' element={<About />} />
           <Route path="/footer" element={<Footer />} />
-          <Route path="/lovecompatibility" element={<LoveCompatibility />} />
           <Route path='/Contact' element={<Contact />} />
           <Route path='/Aries' element={<Aries />} />
           <Route path='/Taurus' element={<Taurus />} />

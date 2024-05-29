@@ -26,7 +26,7 @@ const ScoreTest = () => {
         <h2>LoveTest Questionnaire Analysis:</h2>
         <h2>{partnerName} loves you, {yourName}!</h2>
 
-        <p>There are always ups and downs in every relationship. Although you think you know a lot about your partner already, you might want to spend some more quality time together. Love, trust, understanding, affection, honesty, tolerance and loyalty are very important factors for a successful relationship. Think about what's still missing in your relationship and how you could improve it.</p>
+        <p>There are always ups and downs in every relationship. Although you think you know a lot about your partner already, you might want to spend some more quality time together. <span>Love, trust, understanding, affection, honesty, tolerance and loyalty</span> are very important factors for a successful relationship. Think about what's still missing in your relationship and how you could improve it.</p>
 
         <p>This result is based on the answers which you selected in the LoveTest questionnaire. Please check out the quizzes in the <NavLink to='/QuizCentral'>QuizCentral</NavLink> for more indepth quizzes and extended results.</p>
 

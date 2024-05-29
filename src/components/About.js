@@ -1,10 +1,15 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import '../assets/css/About.css'
 import Navbar from './Navbar'
 import Footer from './Footer'
 import homepagebgvideo from '../assets/images/homepagebgvideo.mp4'
 
 const About = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <Navbar />

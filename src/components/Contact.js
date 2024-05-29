@@ -1,10 +1,15 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Navbar from './Navbar'
 import Footer from './Footer'
 import '../assets/css/Contact.css'
 import homepagebgvideo from '../assets/images/homepagebgvideo.mp4'
 
 const Contact = () => {
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     return (
         <div>
             <Navbar />
@@ -38,7 +43,7 @@ const Contact = () => {
 
                         <p>Please let us know what's on your mind. Have a question for us? Ask away.</p><br /><br />
 
-                        <textarea name="" id=""></textarea><br /><br /><br/>
+                        <textarea name="" id=""></textarea><br /><br /><br />
 
 
                         <div className="btn">

@@ -49,7 +49,7 @@ const Navbar = () => {
                                         <li><NavLink to='/NumerologyAnalysis' >Numerology Analysis</NavLink></li>
                                         <li><NavLink to='/LoveFortune'>Love Fortune Teller</NavLink></li>
                                         <li><NavLink to='/LoveThermometer'>Love Thermomemter</NavLink></li>
-                                        <li><NavLink to='/QuizCentralPage'>More..</NavLink></li>
+                                        <li><NavLink to='/QuizCentral'>More..</NavLink></li>
                                     </ul>
                                     : null
                             )}

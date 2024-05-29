@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { NavLink, useNavigate, useLocation } from 'react-router-dom'
 import Navbar from './Navbar'
 import Footer from './Footer'
@@ -8,15 +8,19 @@ import homepagebgvideo from '../assets/images/homepagebgvideo.mp4'
 
 const OriginalLoveTest = () => {
 
- const location = useLocation();
-  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  const location = useLocation();
+
   const navigateToDisplay = useNavigate();
 
   const handleSubmit = () => {
     navigateToDisplay('/OriginalLoveTestPart1', { state: { yourName, partnerName } });
   };
 
-  const { inputName, inputPartnerName } = location.state || {inputName: '', inputPartnerName: ''}
+  const { inputName, inputPartnerName } = location.state || { inputName: '', inputPartnerName: '' }
 
   const [yourName, setYourName] = useState(inputName);
   const [partnerName, setPartnerName] = useState(inputPartnerName);
