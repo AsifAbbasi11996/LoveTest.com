@@ -34,13 +34,6 @@ import LoveFortuneTeller from './components/LoveFortuneTeller';
 import LoveFortuneResults from './components/LoveFortuneResults';
 import LoveThermometerResults from './components/LoveThermometerResults';
 
-
-// pages 
-
-import QuizCentralPage from './pages/QuizCentralPage';
-import AboutPage from './pages/AboutPage';
-
-
 const App = () => {
 
   return (
@@ -78,12 +71,6 @@ const App = () => {
           <Route path='/LoveFortuneTeller' element={<LoveFortuneTeller/>}/>
           <Route path='/LoveFortuneResults' element={<LoveFortuneResults/>}/>
           <Route path='/LoveThermometerResults' element={<LoveThermometerResults/>}/>
-          
-
-          {/* pages */}
-          <Route path='/quizcentralpage' element={<QuizCentralPage />} />
-          <Route path='/AboutPage' element={<AboutPage />} />
-
         </Routes>
     </>
   )

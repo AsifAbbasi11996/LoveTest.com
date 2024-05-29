@@ -16,13 +16,13 @@ const Footer = () => {
                         <ul>
                             <li><NavLink to='/OriginalLoveTest'>Original Love Test</NavLink></li>
                             <li><NavLink to='/Compatibility'>Compatibility Analysis</NavLink></li>
-                            <li><NavLink to='/QuizCentralPage'>Quiz Central</NavLink></li>
+                            <li><NavLink to='/QuizCentral'>Quiz Central</NavLink></li>
                         </ul>
                     </div>
                     <div className="second">
                         <h3>Love Test.com</h3>
                         <ul>
-                            <li><NavLink to='/AboutPage'>About LoveTest</NavLink></li>
+                            <li><NavLink to='/About'>About LoveTest</NavLink></li>
                             <li><NavLink to='/Contact'>Contact</NavLink></li>
                             <li><NavLink>Copyright</NavLink></li>
                             <li><NavLink>Privacy Policy</NavLink></li>

@@ -37,7 +37,7 @@ const Navbar = () => {
                 </div>
                 <div className="navbar">
                     <ul className={click ? 'flex active' : 'flex'}>
-                        <li className='sub-nav'><NavLink to='/QuizCentralPage'>Quiz Central</NavLink>
+                        <li className='sub-nav'><NavLink to='/QuizCentral'>Quiz Central</NavLink>
                             <button onClick={() => setIsOpen(!isOpen)}>
                                 <i class="ri-arrow-down-s-line"></i>
                             </button>
@@ -79,7 +79,7 @@ const Navbar = () => {
                             )}
 
                         </li>
-                        <li className='sub-nav'><NavLink to='/AboutPage'>About</NavLink>
+                        <li className='sub-nav'><NavLink to='/About'>About</NavLink>
                             <button onClick={() => setIsOpen(!isOpen)}>
                                 <i class="ri-arrow-down-s-line"></i>
                             </button>

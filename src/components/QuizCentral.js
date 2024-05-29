@@ -1,10 +1,14 @@
 import React from 'react'
 import '../assets/css/QuizCentral.css'
 import { NavLink } from 'react-router-dom'
+import Navbar from './Navbar'
+import Footer from './Footer'
 import homepagebgvideo from '../assets/images/homepagebgvideo.mp4'
 
 const QuizCentral = () => {
   return (
+    <>
+    <Navbar/>
     <div className='main_container'>
       <video autoPlay loop muted src={homepagebgvideo}></video>
       <div className="left-container">
@@ -34,6 +38,8 @@ const QuizCentral = () => {
       </div>
 
     </div>
+    <Footer/>
+    </>
   )
 }
 
