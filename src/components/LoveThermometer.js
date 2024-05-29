@@ -8,11 +8,12 @@ const LoveThermometer = () => {
 
     const [yourName, setYourName] = useState('');
     const [partnerName, setPartnerName] = useState('');
+    const randomNumber1 = Math.floor(Math.random() * 100) + 1;
 
     const navigateToDisplay = useNavigate();
 
     const handleSubmit = () => {
-        navigateToDisplay('/LoveThermometerResults', { state: { yourName, partnerName } });
+        navigateToDisplay('/LoveThermometerResults', { state: { yourName, partnerName, randomNumber1 } });
     };
 
 
@@ -28,7 +29,7 @@ const LoveThermometer = () => {
                 <p>If you choose "All Aspects" then the combined average of all aspects will be shown. You can also select just one aspect to get the score for it.</p>
 
                 <div className="form">
-                    <form action="" method='post'>
+                    <form onSubmit={handleSubmit} action="" method='post'>
                         <h2>Information About You :</h2><br />
                         <label htmlFor="">Full Name :</label>
                         <input type="text" value={yourName} onChange={(e) => setYourName(e.target.value)} /><br /><br />
@@ -113,7 +114,7 @@ const LoveThermometer = () => {
                         </select><br /><br />
 
                         <h2>Are You Ready ?</h2><br />
-                        <button onClick={handleSubmit}><NavLink to='/LoveThermometerResults'>Continue</NavLink></button>
+                        <button onClick={handleSubmit} ><NavLink to='/LoveThermometerResults'>Continue</NavLink></button>
                     </form>
                 </div>
 

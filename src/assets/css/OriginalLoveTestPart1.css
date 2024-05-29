@@ -147,6 +147,20 @@
     }
 }
 
+.numerology-container {
+
+    h2,
+    p {
+        text-align: center;
+
+        img {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+}
+
 
 @media only screen and (min-width:120px) and (max-width:720px) {
 
@@ -161,6 +175,5 @@
     .love-fortune {
         padding: 2% 7%;
     }
-
 
 }

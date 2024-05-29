@@ -9,7 +9,7 @@ const LoveFortune = () => {
     
     const [yourName, setYourName] = useState('');
 
-    // First useNavigate hook
+    
     const navigateToDisplay = useNavigate();
 
     const handleSubmit = () => {

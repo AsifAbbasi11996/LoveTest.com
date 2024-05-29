@@ -7,7 +7,7 @@ const LoveThermometerResults = () => {
 
     const location = useLocation();
 
-    const { yourName, partnerName} = location.state || { yourName: '', partnerName: '' }
+    const { yourName, partnerName, randomNumber1 } = location.state || { yourName: '', partnerName: '' }
 
     return (
         <>
@@ -18,10 +18,8 @@ const LoveThermometerResults = () => {
                     <div className="one">
                         <h2>LoveTest Calculator Results for :</h2>
                         <h2>{yourName} & {partnerName} </h2>
-                        <h2>percent compatible</h2>
-                        <div className="progress-bar">
-
-                        </div>
+                        <h2>{randomNumber1} % compatible</h2>
+                    
                         <p>This percentage shows how much</p>
                         <p>{yourName} likes {partnerName}</p>
                     </div>

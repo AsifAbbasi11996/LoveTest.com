@@ -8,7 +8,7 @@ const ScoreTest = () => {
 
   const location = useLocation();
 
-  const { yourName, partnerName } = location.state || { yourName: '', partnerName: '' };
+  const { yourName, partnerName, randomNumber1, randomNumber2 } = location.state || { yourName: '', partnerName: '' };
 
 
   return (
@@ -31,8 +31,8 @@ const ScoreTest = () => {
         <p>This result is based on the answers which you selected in the LoveTest questionnaire. Please check out the quizzes in the <NavLink to='/QuizCentral'>QuizCentral</NavLink> for more indepth quizzes and extended results.</p>
 
         <h2>Numerology Analysis</h2>
-        <h2>{yourName} is % percent compatible with {partnerName}</h2>
-        <h2>{partnerName} is % percent compatible with {yourName}</h2>
+        <h2>{yourName} is {randomNumber1} %  compatible with {partnerName}</h2>
+        <h2>{partnerName} is {randomNumber2} %  compatible with {yourName}</h2>
 
         <p>These percentages are based on the names which you entered at the beginning of the LoveTest. To get the most accurate results, you should always provide the first, middle and last name. You can also take the <NavLink to='/LoveThermometer'>LoveThermometer</NavLink> for a more indepth analysis of various aspects of your relationship.</p>
 
