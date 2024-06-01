@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
 import Navbar from './Navbar'
 import Footer from './Footer'
@@ -6,16 +6,21 @@ import Cancer2 from '../assets/images/Cancer2.jpg'
 import astrologerbgvideo from '../assets/images/astrologerbgvideo.mp4'
 
 const Cancer = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div>
-      <Navbar/>
+      <Navbar />
       <div className='zodiac Cancercontainer'>
         <video autoPlay loop muted src={astrologerbgvideo}>
         </video>
 
         <h1>Compatibility Information for Cancer</h1>
         <NavLink to='/Cancer'><img src={Cancer2} alt="" /><h2>Cancer</h2></NavLink>
-        <p className='para'>This information was kindly provided by the folks of AstroMate.<br/> The only online match-making service that uses astrology to find your match made in heaven.</p>
+        <p className='para'>This information was kindly provided by the folks of AstroMate.<br /> The only online match-making service that uses astrology to find your match made in heaven.</p>
 
         <div className='male-female'>
           <div className='male'>
@@ -70,7 +75,7 @@ const Cancer = () => {
         </div>
 
       </div>
-      <Footer/>
+      <Footer />
     </div>
   )
 }

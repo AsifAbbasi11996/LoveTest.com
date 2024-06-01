@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useLocation } from 'react-router-dom';
 import Navbar from './Navbar'
 import Footer from './Footer'
@@ -6,6 +6,10 @@ import heart from '../assets/images/heart.png'
 
 
 const NumerologyAnalysisPart1 = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const location = useLocation();
 

@@ -1,11 +1,14 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
+import React, { useEffect } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom';
 import '../assets/css/OriginalLoveTestPart1.css'
 import Navbar from './Navbar'
 import Footer from './Footer'
 
 const OriginalLoveTestPart1 = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const randomNumber1 = Math.floor(Math.random() * 100) + 1;
   const randomNumber2 = Math.floor(Math.random() * 100) + 1;
@@ -174,7 +177,7 @@ const OriginalLoveTestPart1 = () => {
           </form>
 
           <div className="btn">
-            <button onClick={handleClick}><NavLink to='/ScoreTest'>Continue</NavLink></button>
+            <button onClick={handleClick}>Continue</button>
           </div>
         </div>
       </div>

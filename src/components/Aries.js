@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
 import Navbar from './Navbar'
 import Footer from './Footer'
@@ -6,6 +6,11 @@ import Aries2 from '../assets/images/Aries2.jpg'
 import astrologerbgvideo from '../assets/images/astrologerbgvideo.mp4'
 
 const Aries = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div>
       <Navbar />
@@ -15,7 +20,7 @@ const Aries = () => {
 
         <h1>Compatibility Information for Aries</h1>
         <NavLink to='/Aries'><img src={Aries2} alt="" /><h2>Aries</h2></NavLink>
-        <p className='para'>This information was kindly provided by the folks of AstroMate. <br/> The only online match-making service that uses astrology to find your match made in heaven.</p>
+        <p className='para'>This information was kindly provided by the folks of AstroMate. <br /> The only online match-making service that uses astrology to find your match made in heaven.</p>
 
         <div className='male-female'>
           <div className='male'>

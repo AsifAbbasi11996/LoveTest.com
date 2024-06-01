@@ -1,9 +1,13 @@
-import React, { useState } from 'react'
-import { useLocation, useNavigate, NavLink } from 'react-router-dom';
+import React, { useState, useEffect } from 'react'
+import { useLocation, useNavigate } from 'react-router-dom';
 import Navbar from './Navbar'
 import Footer from './Footer'
 
 const LoveFortuneTeller = () => {
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     const [womanName, setWomanName] = useState('')
     const [bestFriends, setBestFriends] = useState('')
@@ -106,7 +110,7 @@ const LoveFortuneTeller = () => {
                 </div>
 
                 <div className="btn">
-                    <button onClick={handleClick}><NavLink to='/LoveFortuneResults'>Continue</NavLink></button>
+                    <button onClick={handleClick}>Continue</button>
                 </div>
             </div>
             <Footer />

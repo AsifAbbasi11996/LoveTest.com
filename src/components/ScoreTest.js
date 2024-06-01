@@ -1,10 +1,14 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useLocation, NavLink } from 'react-router-dom';
 import Navbar from './Navbar'
 import Footer from './Footer'
 import heart from '../assets/images/heart.png'
 
 const ScoreTest = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const location = useLocation();
 

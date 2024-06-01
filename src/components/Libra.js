@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
 import Navbar from './Navbar'
 import Footer from './Footer'
@@ -6,9 +6,14 @@ import Libra2 from '../assets/images/Libra2.jpg'
 import astrologerbgvideo from '../assets/images/astrologerbgvideo.mp4'
 
 const Libra = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div>
-      <Navbar/>
+      <Navbar />
       <div className='zodiac Libracontainer'>
         <video autoPlay loop muted src={astrologerbgvideo}>
         </video>
@@ -69,7 +74,7 @@ const Libra = () => {
           <p>This is not usually lasting. The Fish is too confused and sensitive in nature that makes this connection a highly complicated combination. The end result can be devastating if you aren't careful.</p>
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   )
 }

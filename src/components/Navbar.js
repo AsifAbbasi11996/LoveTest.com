@@ -86,7 +86,7 @@ const Navbar = () => {
                             {(
                                 isOpen ?
                                     <ul className="dropdown">
-                                        <li><NavLink to='/AboutPage'>About Love Test</NavLink></li>
+                                        <li><NavLink to='/About'>About Love Test</NavLink></li>
                                     </ul>
                                     : null
                             )}

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
 import Navbar from './Navbar'
 import Footer from './Footer'
@@ -6,9 +6,14 @@ import Scorpio2 from '../assets/images/Scorpio2.jpg'
 import astrologerbgvideo from '../assets/images/astrologerbgvideo.mp4'
 
 const Scorpio = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div>
-      <Navbar/>
+      <Navbar />
       <div className='zodiac Scorpiocontainer'>
         <video autoPlay loop muted src={astrologerbgvideo}>
         </video>
@@ -69,7 +74,7 @@ const Scorpio = () => {
           <p>This is not bad. Probably the most erotic sexual combination. The Fish is willing to be a part of your whims and desires, and that makes for a lasting union.</p>
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   )
 }

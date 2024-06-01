@@ -1,9 +1,13 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Navbar from './Navbar'
 import Footer from './Footer'
 import { useLocation } from 'react-router-dom'
 
 const LoveThermometerResults = () => {
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     const location = useLocation();
 
@@ -19,7 +23,7 @@ const LoveThermometerResults = () => {
                         <h2>LoveTest Calculator Results for :</h2>
                         <h2>{yourName} & {partnerName} </h2>
                         <h2>{randomNumber1} % compatible</h2>
-                    
+
                         <p>This percentage shows how much</p>
                         <p>{yourName} likes {partnerName}</p>
                     </div>

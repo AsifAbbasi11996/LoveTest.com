@@ -1,11 +1,14 @@
-import React, { useState } from 'react'
-import { NavLink } from 'react-router-dom'
+import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom';
 import Navbar from './Navbar'
 import Footer from './Footer'
 import homepagebgvideo from '../assets/images/homepagebgvideo.mp4'
 
 const LoveFortune = () => {
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
 
     const [yourName, setYourName] = useState('');
 
@@ -74,7 +77,7 @@ const LoveFortune = () => {
                         <label htmlFor="">Female</label><br /><br />
 
                         <h2>Are You Ready ?</h2><br />
-                        <button onClick={handleSubmit}><NavLink to='/LoveFortuneTeller'>Continue</NavLink></button>
+                        <button onClick={handleSubmit}>Continue</button>
                     </form>
                 </div>
 

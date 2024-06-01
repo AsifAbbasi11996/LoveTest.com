@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { NavLink, useNavigate, useLocation } from 'react-router-dom'
+import { useNavigate, useLocation } from 'react-router-dom'
 import Navbar from './Navbar'
 import Footer from './Footer'
 import '../assets/css/OriginalLoveTest.css'
@@ -113,7 +113,7 @@ const OriginalLoveTest = () => {
               </select>
 
               <h2>Are You Ready ?</h2>
-              <button onClick={handleSubmit}><NavLink to='/OriginalLoveTestPart1'>Continue</NavLink></button>
+              <button onClick={handleSubmit}>Continue</button>
             </form>
           </div>
 

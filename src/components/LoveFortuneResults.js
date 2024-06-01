@@ -1,13 +1,17 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useLocation } from 'react-router-dom';
 import Navbar from './Navbar'
 import Footer from './Footer'
 
 const LoveFortuneResults = () => {
 
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     const location = useLocation();
 
-  const { yourName, partnerName, womanName, bestFriends, wish } = location.state || { yourName: '', partnerName: '', womanName: '', bestFriends: '', wish:'' };
+    const { yourName, partnerName, womanName, bestFriends, wish } = location.state || { yourName: '', partnerName: '', womanName: '', bestFriends: '', wish: '' };
 
     return (
         <>

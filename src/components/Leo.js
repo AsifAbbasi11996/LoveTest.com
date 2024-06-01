@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
 import Navbar from './Navbar'
 import Footer from './Footer'
@@ -6,9 +6,14 @@ import Leo2 from '../assets/images/Leo2.jpg'
 import astrologerbgvideo from '../assets/images/astrologerbgvideo.mp4'
 
 const Leo = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div>
-      <Navbar/>
+      <Navbar />
       <div className='zodiac Leocontainer'>
         <video autoPlay loop muted src={astrologerbgvideo}>
         </video>
@@ -69,7 +74,7 @@ const Leo = () => {
           <p>This is a detrimental relationship for the shy Pisces and a most unlikely attraction for you. Not compatible and very hurtful for the Fish that is attracted to you.</p>
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   )
 }

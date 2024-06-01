@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { NavLink, useNavigate } from 'react-router-dom'
 import '../assets/css/Home.css'
 import Navbar from './Navbar'
@@ -7,6 +7,10 @@ import homepagebgvideo from '../assets/images/homepagebgvideo.mp4'
 
 
 const Home = () => {
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     const [inputName, setInputName] = useState('')
     const [inputPartnerName, setInputPartnerName] = useState('')
@@ -48,7 +52,7 @@ const Home = () => {
                     </div>
 
                     <div className="btn">
-                        <button onClick={handleSubmit}><NavLink to='/OriginalLoveTestPart1'>Continue</NavLink></button>
+                        <button onClick={handleSubmit}>Continue</button>
                     </div>
                 </div>
 
