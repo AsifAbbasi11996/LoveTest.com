@@ -64,10 +64,10 @@ const Home = () => {
                     </div>
 
                     <div className="box3 box">
-                        <h1><NavLink to='/QuizCentralPage'>Quiz Central</NavLink></h1>
+                        <h1><NavLink to='/QuizCentral'>Quiz Central</NavLink></h1>
                         <p>There are plenty of personality quizzes and love tests in our quiz central. More quizzes will be added soon. Come back often for the latest quizzes!</p>
 
-                        <button><NavLink to='/QuizCentralPage'>Quiz Central</NavLink></button>
+                        <button><NavLink to='/QuizCentral'>Quiz Central</NavLink></button>
                     </div>
                 </div>
 
