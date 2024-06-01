@@ -13,8 +13,13 @@ const LoveThermometer = () => {
     const navigateToDisplay = useNavigate();
 
     const handleSubmit = () => {
-        navigateToDisplay('/LoveThermometerResults', { state: { yourName, partnerName, randomNumber1 } });
+        if (yourName === '' && partnerName === '') {
+            alert('Please enter your details')
+        } else {
+            navigateToDisplay('/LoveThermometerResults', { state: { yourName, partnerName, randomNumber1 } });
+        }
     };
+
 
 
     return (
@@ -32,13 +37,13 @@ const LoveThermometer = () => {
                     <form onSubmit={handleSubmit} action="" method='post'>
                         <h2>Information About You :</h2><br />
                         <label htmlFor="">Full Name :</label>
-                        <input type="text" value={yourName} onChange={(e) => setYourName(e.target.value)} /><br /><br />
+                        <input type="text" value={yourName} onChange={(e) => setYourName(e.target.value)} required /><br /><br />
 
                         <label htmlFor="">Gender :</label>
-                        <input type="radio" name='gender' id='male' />
+                        <input type="radio" name='gender' id='male' required />
                         &nbsp;&nbsp;
                         <label htmlFor="">Male</label>
-                        <input type="radio" name='gender' id='female' />
+                        <input type="radio" name='gender' id='female' required />
                         &nbsp;&nbsp;
                         <label htmlFor="">Female</label><br /><br />
 
@@ -61,14 +66,14 @@ const LoveThermometer = () => {
 
                         <h2>About Your Dream Partner :</h2><br />
                         <label htmlFor="">Full Name :</label>
-                        <input type="text" value={partnerName} onChange={(e) => setPartnerName(e.target.value)} /><br /><br />
+                        <input type="text" value={partnerName} onChange={(e) => setPartnerName(e.target.value)} required /><br /><br />
 
                         <label htmlFor="">Gender :</label>
-                        <input type="radio" name='gender' id='male' />
+                        <input type="radio" name='gender' id='male' required />
                         &nbsp;&nbsp;
                         <label htmlFor="">Male</label>
 
-                        <input type="radio" name='gender' id='female' />
+                        <input type="radio" name='gender' id='female' required />
                         &nbsp;&nbsp;
                         <label htmlFor="">Female</label><br /><br />
 
@@ -92,15 +97,15 @@ const LoveThermometer = () => {
 
                         <h2>Love Thermometer Options: </h2><br />
                         <label htmlFor="">How do you personally feel about your relationship?</label><br /><br />
-                        <input type="radio" name='gender' id='female' />
+                        <input type="radio" name='gender' id='female' required />
                         &nbsp;&nbsp;
                         <label htmlFor=""> I'm not happy </label>
 
-                        <input type="radio" name='gender' id='female' />
+                        <input type="radio" name='gender' id='female' required />
                         &nbsp;&nbsp;
                         <label htmlFor="">I'm happy</label>
 
-                        <input type="radio" name='gender' id='female' />
+                        <input type="radio" name='gender' id='female' required />
                         &nbsp;&nbsp;
                         <label htmlFor="">I don't know</label><br /><br />
 

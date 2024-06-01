@@ -16,7 +16,11 @@ const OriginalLoveTestPart1 = () => {
   const navigateToHome = useNavigate();
 
   const handleClick = () => {
-    navigateToHome('/ScoreTest', { state: { yourName, partnerName, randomNumber1, randomNumber2 } });
+    if (yourName === '' && partnerName === '') {
+      alert('Please fill your name and partner name')
+    } else {
+      navigateToHome('/ScoreTest', { state: { yourName, partnerName, randomNumber1, randomNumber2 } });
+    }
   };
 
   const { yourName, partnerName } = location.state || { yourName: '', partnerName: '' };

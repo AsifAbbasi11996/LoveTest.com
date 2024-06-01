@@ -11,12 +11,16 @@ const Home = () => {
     const [inputName, setInputName] = useState('')
     const [inputPartnerName, setInputPartnerName] = useState('')
 
+
     const navigateToDisplay = useNavigate();
 
     const handleSubmit = () => {
-        navigateToDisplay('/OriginalLoveTest', { state: { inputName, inputPartnerName } });
+        if (inputName === '' && inputPartnerName === '') {
+            alert('Please fill all the fields')
+        } else {
+            navigateToDisplay('/OriginalLoveTest', { state: { inputName, inputPartnerName } });
+        }
     };
-
 
     return (
         <div>
@@ -40,11 +44,11 @@ const Home = () => {
                         <label htmlFor="">Your Name :</label>
                         <input type="text" placeholder='Enter Your Name' value={inputName} onChange={(e) => setInputName(e.target.value)} /><br></br>
                         <label htmlFor="">Your Partner :</label>
-                        <input type="text" placeholder='Enter Your Partner Name'  value={inputPartnerName} onChange={(e) => setInputPartnerName(e.target.value)}/>
+                        <input type="text" placeholder='Enter Your Partner Name' value={inputPartnerName} onChange={(e) => setInputPartnerName(e.target.value)} />
                     </div>
 
                     <div className="btn">
-                    <button onClick={handleSubmit}><NavLink to='/OriginalLoveTestPart1'>Continue</NavLink></button>
+                        <button onClick={handleSubmit}><NavLink to='/OriginalLoveTestPart1'>Continue</NavLink></button>
                     </div>
                 </div>
 

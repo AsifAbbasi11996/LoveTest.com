@@ -14,10 +14,14 @@ const LoveFortuneTeller = () => {
     const navigateToHome = useNavigate();
 
     const handleClick = () => {
-        navigateToHome('/LoveFortuneResults', { state: { yourName, partnerName, womanName, bestFriends, wish } });
+        if (womanName === '' && bestFriends === '' && wish === '') {
+            alert('Please fill all the fields')
+        } else {
+            navigateToHome('/LoveFortuneResults', { state: { yourName, partnerName, womanName, bestFriends, wish } });
+        }
     };
 
-    const { yourName, partnerName } = location.state || { yourName: '', partnerName: ''};
+    const { yourName, partnerName } = location.state || { yourName: '', partnerName: '' };
 
 
     return (
@@ -30,7 +34,7 @@ const LoveFortuneTeller = () => {
                     <div className="form1 box">
                         <h2>1. {yourName}, please enter the name of a woman.</h2>
                         <input type="text" value={womanName}
-                            onChange={(e) => setWomanName(e.target.value)} /><br /><br />
+                            onChange={(e) => setWomanName(e.target.value)} required /><br /><br />
 
                         <h2>2. What is your favorite color?</h2>
                         <select name="colors" id="">
@@ -44,7 +48,7 @@ const LoveFortuneTeller = () => {
                         </select><br /><br />
 
                         <h2>3. Please enter your first initial.</h2>
-                        <input type="text" /><br /><br />
+                        <input type="text" required /><br /><br />
 
                         <h2>4. {yourName}, select the month you were born in :</h2>
                         <select name="month" id="month">
@@ -64,10 +68,10 @@ const LoveFortuneTeller = () => {
                         </select><br /><br />
 
                         <h2>5. Which color do you prefer ?</h2>
-                        <input type="radio" name='color' />
+                        <input type="radio" name='color' required />
                         &nbsp;&nbsp;
                         <label htmlFor="">Black</label>
-                        <input type="radio" name='color' />
+                        <input type="radio" name='color' required />
                         &nbsp;&nbsp;
                         <label htmlFor="">White</label>
                     </div>
@@ -75,29 +79,29 @@ const LoveFortuneTeller = () => {
                     <div className="form2 box">
 
                         <h2>6. Enter the name of your bestfriend ?</h2>
-                        <input type="text" value={bestFriends} onChange={(e) => setBestFriends(e.target.value)} /><br /><br />
+                        <input type="text" value={bestFriends} onChange={(e) => setBestFriends(e.target.value)} required /><br /><br />
 
                         <h2>7. What is your favorite number ?</h2>
-                        <input type="text" /><br /><br />
+                        <input type="text" required /><br /><br />
 
                         <h2>8. Which state do you prefer ?</h2>
-                        <input type="radio" name='city' />
+                        <input type="radio" name='city' required />
                         &nbsp;&nbsp;
                         <label htmlFor="">Mumbai</label>
-                        <input type="radio" name='city' />
+                        <input type="radio" name='city' required />
                         &nbsp;&nbsp;
                         <label htmlFor="">Delhi</label><br /><br />
 
                         <h2>9. Do you prefer the ocean or the lake?</h2>
-                        <input type="radio" name='abc' />
+                        <input type="radio" name='abc' required />
                         &nbsp;&nbsp;
                         <label htmlFor="">Ocean</label>
-                        <input type="radio" name='abc' />
+                        <input type="radio" name='abc' required />
                         &nbsp;&nbsp;
                         <label htmlFor="">Lake</label><br /><br />
 
                         <h2>10. Make a realistic wish...</h2>
-                        <input type="text" value={wish} onChange={(e) => setWish(e.target.value)} />
+                        <input type="text" value={wish} onChange={(e) => setWish(e.target.value)} required />
                     </div>
                 </div>
 

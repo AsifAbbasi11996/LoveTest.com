@@ -20,7 +20,11 @@ const NumerologyAnalysis = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        navigateToDisplay('/NumerologyAnalysisPart1', { state: { yourName, firstPerson, secondPerson, thirdPerson, randomNumber1, randomNumber2, randomNumber3 } });
+        if (yourName === '' && firstPerson === '' && secondPerson === '' && thirdPerson === '') {
+            alert('Please enter your name and your partner\'s name')
+        } else {
+            navigateToDisplay('/NumerologyAnalysisPart1', { state: { yourName, firstPerson, secondPerson, thirdPerson, randomNumber1, randomNumber2, randomNumber3 } });
+        }
     };
 
 
@@ -39,13 +43,13 @@ const NumerologyAnalysis = () => {
                     <form onSubmit={handleSubmit} action="" method='post'>
                         <h2>Information About You :</h2><br />
                         <label htmlFor="">Full Name :</label>
-                        <input type="text" value={yourName} onChange={(e) => setYourName(e.target.value)} /><br /><br />
+                        <input type="text" value={yourName} onChange={(e) => setYourName(e.target.value)} required /><br /><br />
 
                         <label htmlFor="">Gender :</label>
-                        <input type="radio" name='gender' id='male' />
+                        <input type="radio" name='gender' id='male' required />
                         &nbsp;&nbsp;
                         <label htmlFor="">Male</label>
-                        <input type="radio" name='gender' id='female' />
+                        <input type="radio" name='gender' id='female' required />
                         &nbsp;&nbsp;
                         <label htmlFor="">Female</label><br /><br />
 
@@ -67,17 +71,17 @@ const NumerologyAnalysis = () => {
                         </select><br /><br />
 
                         <h2>Your Preferred Partner is :</h2><br />
-                        <input type="radio" name='gender' id='male' />
+                        <input type="radio" name='gender' id='male' required />
                         &nbsp;&nbsp;
                         <label htmlFor="">Male</label>
 
-                        <input type="radio" name='gender' id='female' />
+                        <input type="radio" name='gender' id='female' required />
                         &nbsp;&nbsp;
                         <label htmlFor="">Female</label><br /><br />
 
                         <h2>Information ABout Other Persons :</h2><br />
                         <label htmlFor="">Person #1 — Full Name :</label><br />
-                        <input type="text" value={firstPerson} onChange={(e) => setFirstPerson(e.target.value)} /><br /><br />
+                        <input type="text" value={firstPerson} onChange={(e) => setFirstPerson(e.target.value)} required /><br /><br />
                         <label htmlFor="">Zodiac Sign :</label>
                         <select name="" id="">
                             <option value="">Select Your Zodiac Sign</option>
@@ -96,7 +100,7 @@ const NumerologyAnalysis = () => {
                         </select><br /><br />
 
                         <label htmlFor="">Person #2 — Full Name :</label><br />
-                        <input type="text" value={secondPerson} onChange={(e) => setSecondPerson(e.target.value)} /><br /><br />
+                        <input type="text" value={secondPerson} onChange={(e) => setSecondPerson(e.target.value)} required /><br /><br />
                         <label htmlFor="">Zodiac Sign :</label>
                         <select name="" id="">
                             <option value="">Select Your Zodiac Sign</option>
@@ -115,7 +119,7 @@ const NumerologyAnalysis = () => {
                         </select><br /><br />
 
                         <label htmlFor="">Person #3 — Full Name :</label><br />
-                        <input type="text" value={thirdPerson} onChange={(e) => setThirdPerson(e.target.value)} /><br /><br />
+                        <input type="text" value={thirdPerson} onChange={(e) => setThirdPerson(e.target.value)} required /><br /><br />
                         <label htmlFor="">Zodiac Sign :</label>
                         <select name="" id="">
                             <option value="">Select Your Zodiac Sign</option>

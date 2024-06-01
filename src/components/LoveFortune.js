@@ -6,14 +6,18 @@ import Footer from './Footer'
 import homepagebgvideo from '../assets/images/homepagebgvideo.mp4'
 
 const LoveFortune = () => {
-    
+
     const [yourName, setYourName] = useState('');
 
-    
+
     const navigateToDisplay = useNavigate();
 
     const handleSubmit = () => {
-        navigateToDisplay('/LoveFortuneTeller', { state: { yourName } });
+        if (yourName === '') {
+            alert('Please enter your name')
+        } else {
+            navigateToDisplay('/LoveFortuneTeller', { state: { yourName } });
+        }
     };
 
 
@@ -33,13 +37,13 @@ const LoveFortune = () => {
                         <h2>Information About You :</h2><br />
                         <label htmlFor="">Full Name :</label>
                         <input type="text" value={yourName}
-                            onChange={(e) => setYourName(e.target.value)} /><br /><br />
+                            onChange={(e) => setYourName(e.target.value)} required /><br /><br />
 
                         <label htmlFor="">Gender :</label>
-                        <input type="radio" name='gender' id='male' />
+                        <input type="radio" name='gender' id='male' required />
                         &nbsp;&nbsp;
                         <label htmlFor="">Male</label>
-                        <input type="radio" name='gender' id='female' />
+                        <input type="radio" name='gender' id='female' required />
                         &nbsp;&nbsp;
                         <label htmlFor="">Female</label><br /><br />
 
@@ -61,11 +65,11 @@ const LoveFortune = () => {
                         </select><br /><br />
 
                         <h2>Your Preferred Partner is :</h2><br />
-                        <input type="radio" name='gender1' id='male' />
+                        <input type="radio" name='gender1' id='male' required />
                         &nbsp;&nbsp;
                         <label htmlFor="">Male</label>
 
-                        <input type="radio" name='gender1' id='female' />
+                        <input type="radio" name='gender1' id='female' required />
                         &nbsp;&nbsp;
                         <label htmlFor="">Female</label><br /><br />
 

@@ -17,7 +17,11 @@ const OriginalLoveTest = () => {
   const navigateToDisplay = useNavigate();
 
   const handleSubmit = () => {
-    navigateToDisplay('/OriginalLoveTestPart1', { state: { yourName, partnerName } });
+    if (yourName === '' && partnerName === '') {
+      alert('Please fill your name and partner name')
+    } else {
+      navigateToDisplay('/OriginalLoveTestPart1', { state: { yourName, partnerName } });
+    }
   };
 
   const { inputName, inputPartnerName } = location.state || { inputName: '', inputPartnerName: '' }
