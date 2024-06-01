@@ -7,7 +7,7 @@ import homepagebgvideo from '../assets/images/homepagebgvideo.mp4'
 const About = () => {
 
   useEffect(() => {
-    window.scrollTo({top:0, behaviour:'smooth');
+    window.scrollTo(0, 0);
   }, []);
 
   return (
