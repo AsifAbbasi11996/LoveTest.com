@@ -59,10 +59,10 @@ const OriginalLoveTest = () => {
               <label htmlFor="">Gender :</label>
               <input type="radio" name='gender' id='male' />
               &nbsp;&nbsp;
-              <label htmlFor="">Male</label>
+              <label htmlFor="male">Male</label>
               <input type="radio" name='gender' id='female' />
               &nbsp;&nbsp;
-              <label htmlFor="">Female</label><br />
+              <label htmlFor="female">Female</label><br />
 
               <label htmlFor="">Zodiac Sign :</label>
               <select name="" id="">
@@ -87,13 +87,13 @@ const OriginalLoveTest = () => {
                 onChange={(e) => setPartnerName(e.target.value)} /><br />
 
               <label htmlFor="">Gender :</label>
-              <input type="radio" name='gender1' id='male' />
+              <input type="radio" name='gender1' id='male1' />
               &nbsp;&nbsp;
-              <label htmlFor="">Male</label>
+              <label htmlFor="male1">Male</label>
 
-              <input type="radio" name='gender1' id='female' />
+              <input type="radio" name='gender1' id='female1' />
               &nbsp;&nbsp;
-              <label htmlFor="">Female</label><br />
+              <label htmlFor="female1">Female</label><br />
 
               <label htmlFor="">Zodiac Sign :</label>
               <select name="" id="">
